@@ -34,7 +34,7 @@ for i in range(0, layer_number):
         model.add(Dense(neuron_number, activation = 'relu', kernel_regularizer = regularizers.l2(0.001)))
     else:
         model.add(Dense(1))
-model.compile(optimizer=Adam(),loss='mse')
+model.compile(optimizer = Adam(),loss = 'mse')
 
 from keras.utils import plot_model
 plot_model(model, to_file=''.join(['model-', 'layer_num_', str(layer_number), '-neuron_number_',
